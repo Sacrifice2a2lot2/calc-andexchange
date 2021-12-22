@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wetcalc">
+        your weight in kg:  <input type="text" id="a"><br>
+        your height in m:  <input type="text" id="b"><br>
+        your result is:<p id="result">-</p>
+        your BMI : <p id="fit">WAIT...</p>
+        <button onclick="mult()">count</button>    
+        <br>
+        <br>
+        <a id="img1" href=""></a>
+        <a1 id="img2" href=""></a1>
+    </div>  
+    <script>
+        function mult(){
+            var x=document.getElementById("a").value;
+            var y=document.getElementById("b").value;
+            var res=x/y;
+            document.getElementById("result").innerHTML=res;
+            if (res<52){
+                document.getElementById("fit").innerHTML="normal weight"
+                document.getElementById("img1").src="ruhordo.jpg";}
+            else if (res>52){
+                document.getElementById("fit").innerHTML="not normal"
+                document.getElementById("img2").src="ruhordo.jpg";}
+            if (res>23){
+                document.getElementById("fit").innerHTML="normal weight"
+                document.getElementById("img1").src="ruhordo.jpg";}
+            if (res<23){
+                document.getElementById("fit").innerHTML="unnormal"
+                document.getElementById("img1").src="ruhordo.jpg";}
+               }
+    </script>
+</body>
+</html>
